@@ -1,21 +1,25 @@
-//
-//  ContentView.swift
-//  Pager
-//
-//  Created by Erwin Luz León on 13/09/22.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var indiceTab = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            
+            Vista1View(color: .red)
+            
+            Vista1View(color: .purple)
+            
+            Vista1View(color: .gray)
+            
+            Vista1View(color: .green)
+            
+            Vista1View(color: .pink)
+            
         }
-        .padding()
+        .tabViewStyle(.page)
+        .ignoresSafeArea(.all)
     }
 }
 
